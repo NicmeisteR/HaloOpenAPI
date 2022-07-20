@@ -1,0 +1,11 @@
+node_modules
+.next
+.DS_Store
+yarn-error.log
+dist
+examples
+packages
+
+pages/halo-infinite/economy
+pages/halo-infinite/game cms
+pages/halo-mcc

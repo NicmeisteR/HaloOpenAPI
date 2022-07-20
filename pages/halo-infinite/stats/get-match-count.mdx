@@ -1,0 +1,23 @@
+# Get Match Count:
+
+Host: ```https://halostats.svc.halowaypoint.com```<br/>
+Path: ```"/hi/players/{player}/matches/count"```<br/>
+Type: ```GET```<br/>
+
+### Headers: 
+```json
+{
+    "accept": "application/json",
+    "x-343-authorization-spartan": "v4="
+}
+```
+
+## Response Sample 
+```jsx
+{
+	"CustomMatchesPlayedCount": 10,
+	"MatchesPlayedCount": 1409,
+	"MatchmadeMatchesPlayedCount": 1399,
+	"LocalMatchesPlayedCount": 0
+}
+```

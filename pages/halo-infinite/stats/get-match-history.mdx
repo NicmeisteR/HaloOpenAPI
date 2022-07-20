@@ -1,0 +1,83 @@
+# Get Match History:
+
+Host: ```https://halostats.svc.halowaypoint.com```<br/>
+Path: ```"/hi/players/{player}/matches"```<br/>
+Type: ```GET```<br/>
+
+### Headers: 
+```json
+{
+    "accept": "application/json",
+    "x-343-authorization-spartan": "v4="
+}
+```
+
+## Params:
+### count:
+Specify the amount of matches to return.
+* type: integer
+* default: 25
+
+### start:
+Specify the offset/starting position of matches to return.
+* type: integer
+* default: 0
+
+### include-times:
+If true will return the times matches took place.
+* type: boolean
+* default: TBA
+
+
+## Response Sample
+```jsx
+{
+	"Start": 0,
+	"Count": 1,
+	"ResultCount": 1,
+	"Results": [
+		{
+			"MatchId": "f3a00cad-0d53-4e4d-8fe0-dccbc96fc002",
+			"MatchInfo": {
+				"StartTime": "2022-07-20T17:00:48.529Z",
+				"EndTime": "2022-07-20T17:12:52.648Z",
+				"Duration": "PT11M39.4817752S",
+				"LifecycleMode": 3,
+				"GameVariantCategory": 11,
+				"LevelId": "19dfcede-dcd1-45a8-8a77-2b58ce65484f",
+				"MapVariant": {
+					"AssetKind": 2,
+					"AssetId": "f0a1760f-0d4a-4bcc-ac7a-e8f9aee331dc",
+					"VersionId": "517c07d9-c224-4fae-a14a-65f16445fb7f"
+				},
+				"UgcGameVariant": {
+					"AssetKind": 6,
+					"AssetId": "22b8a0eb-0d02-4eb3-8f56-5f63fc254f83",
+					"VersionId": "2cdb80b0-2a02-4934-a649-2911368d49e1"
+				},
+				"ClearanceId": "46f08f2d-2804-4207-8634-fcf6570bec6e",
+				"Playlist": {
+					"AssetKind": 3,
+					"AssetId": "edfef3ac-9cbe-4fa2-b949-8f29deafd483",
+					"VersionId": "6c1bb887-628f-4a16-a794-f07adad39a38"
+				},
+				"PlaylistExperience": 2,
+				"PlaylistMapModePair": {
+					"AssetKind": 7,
+					"AssetId": "cf8f5925-e6e3-413d-882b-c5473b9d589d",
+					"VersionId": "c73c3c85-57e1-4e9c-aba5-cd4609df8a30"
+				},
+				"SeasonId": "Seasons/Season7.json",
+				"PlayableDuration": "PT11M39.485S",
+				"TeamsEnabled": true,
+				"TeamScoringEnabled": true
+			},
+			"LastTeamId": 1,
+			"Outcome": 2,
+			"Rank": 1,
+			"PresentAtEndOfMatch": true
+		}
+	],
+	"Links": {}
+}
+```
